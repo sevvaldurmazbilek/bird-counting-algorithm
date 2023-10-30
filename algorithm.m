@@ -1,4 +1,4 @@
-%% GrayScale Conversion 
+%%GrayScaleConversion 
 
 [FileName,PathName]=uigetfile('*.*','please select the image file');
 
@@ -8,7 +8,7 @@ G=I(:,:,2);
 B=I(:,:,3);
 I=.299*R+.587*G+.114*B; 
 
-%% Thresholding
+%%Thresholding
 
 n=imhist(I);
 N=sum(n);
@@ -32,7 +32,7 @@ A=I<threshold; % Binary Image
 %subplot(1,2,2), imshow(A),title('Binary Image');
 
 
-%% morphological operations
+%%morphological operations
 %opening
 
 S=[0 1 0;1 1 1;0 1 0]; %structuring element
@@ -96,7 +96,7 @@ A2=ones(length(A1(:,1)),length(A1(1,:)))-A1;
 %subplot(1,2,1),imshow(A1),title('Opening');
 %subplot(1,2,2),imshow(A2),title('Closing');
 
-%% connected components labeling
+%%connected components labeling
 
 [x,y] = size(A1); %row and col
 A1 = [zeros(1,y+2);[zeros(x,1) A1 zeros(x,1)]];
@@ -126,7 +126,7 @@ for i = 2:x
     end
 end
 
-% remove the previous expansion of the image
+%remove the previous expansion of the image
 
 labels = labels(2:end,2:end-1);
 change2 = 1;
@@ -159,7 +159,7 @@ for k = 1:K
     end
 end
 
-%% counting
+%%counting
 
 figure,imshow(A1),title('Object Numbers')
 text(10,10,strcat('\color{red}',num2str(length(link)),'\color{red} object found'))
