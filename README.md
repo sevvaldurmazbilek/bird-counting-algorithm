@@ -33,6 +33,6 @@ In order to be able to count the objects in the image, labeling is necessary. Co
 E. Counting
 The last step of the algorithm is to count the objects labeled with the connected component.
 
-![image](https://github.com/sevvaldurmazbilek/bird-counting-
-algorithm/assets/59259659/fa0053d0-32c8-4653-8a82-78de42b46a8f)
+![image](https://github.com/sevvaldurmazbilek/bird-counting-algorithm/assets/59259659/fa0053d0-32c8-4653-8a82-78de42b46a8f)
+
 ![image](https://github.com/sevvaldurmazbilek/bird-counting-algorithm/assets/59259659/ab47212f-2864-44e3-a03c-bde9f424ba30)
